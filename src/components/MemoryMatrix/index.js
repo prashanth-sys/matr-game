@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import {BiArrowBack} from 'react-icons/bi'
 import {Link} from 'react-router-dom'
-import {Line} from 'rc-progress'
+import Line from 'rc-progress'
 import RulesModal from '../RulesModel'
 
 import './index.css'
@@ -25,10 +25,15 @@ class MemoryMatrix extends Component {
 
   getGridButtons = () => {
     const {array, gridSize} = this.state
+
     const myArray = array.slice(0, gridSize * gridSize)
+
     const shuffledArray = myArray.sort(() => Math.random() - 0.5)
+
     const slicedArray = shuffledArray.splice(0, gridSize)
+
     console.log(slicedArray)
+
     setTimeout(() => {
       this.setState({highlightedIndices: []})
     }, 3000)

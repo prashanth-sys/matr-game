@@ -1,9 +1,7 @@
 // RulesModal.js
 
 import Modal from 'react-modal'
-
 import {CgClose} from 'react-icons/cg'
-
 import './index.css'
 
 const RulesModal = ({isOpen, onClose}) => (
